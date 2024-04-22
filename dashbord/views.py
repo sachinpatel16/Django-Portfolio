@@ -1,14 +1,53 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from servies.models import Servies
 
 
-def index(request):
-    serviesData=Servies.objects.all()
-    data ={
-        'serviesData':serviesData
-    }
-    return render(request,'index.html',data)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# from django.shortcuts import render
+# from django.http import HttpResponse
+# from servies.models import Servies,ContectUs
+
+
 
 
 

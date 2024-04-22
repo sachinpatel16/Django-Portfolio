@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+{% load static %}
+
 <html>
 
 <head>
@@ -8,7 +10,7 @@
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Site Metas -->
-  <link rel="icon" href="/static/images/sp.jpg" type="image/gif" />
+  <link rel="icon" href="{% static 'servies/images/sp.jpg' %}" type="image/gif" />
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
@@ -17,17 +19,17 @@
 
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'servies/css/bootstrap.css' %}" />
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
 
   <!-- font awesome style -->
-  <link href="/static/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="{% static 'servies/css/font-awesome.min.css' %}" rel="stylesheet" />
   <!-- Custom styles for this template -->
-  <link href="/static/css/style.css" rel="stylesheet" />
+  <link href="{% static 'servies/css/style.css' %}" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="/static/css/responsive.css" rel="stylesheet" />
+  <link href="{% static 'servies/css/responsive.css' %}" rel="stylesheet" />
 
 </head>
 
@@ -65,15 +67,15 @@
               <li class="nav-item">
                 <a class="nav-link" href="#contect">Contact Us</a>
               </li>
+              {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url "pa" %}">ADD</a>
+              </li>
+              {% endif %}
             </ul>
           </div>
           <div class="quote_btn-container">
-            <a href="">
-              <span>
-                Login
-              </span>
-              <i class="fa fa-user" aria-hidden="true"></i>
-            </a>
+
             <form class="form-inline">
               <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                 <i class="fa fa-search" aria-hidden="true"></i>
@@ -101,18 +103,18 @@
                       "Hello, I'm Sachin, a passionate practitioner of machine learning and data science, well-versed in the Django framework. As an avid problem solver, I leverage data to create innovative solutions. Explore my portfolio to discover how I blend technology and creativity to bring ideas to life."
                     </p>
                     <div class="btn-box">
-                      <a href="" class="btn1">
+                      <a href="#contect" class="btn1">
                         Contact Us
                       </a>
-                      <a href="" class="btn2">
+                      {% comment %} <a href="" class="btn2">
                         About Us
-                      </a>
+                      </a> {% endcomment %}
                     </div>
                   </div>
                 </div>
                 <div class="col-md-7">
                   <div class="img-box">
-                    <img src="/static/images/slider-img.png" alt="">
+                    <img src="{% static 'servies/images/slider-img.png' %}" alt="">
                   </div>
                 </div>
               </div>
@@ -127,32 +129,7 @@
   
   <!-- about section -->
 
-  <section class="about_section layout_padding long_section" id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="img-box">
-            <img src="/static/images/about-img.png" alt="">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                About Us
-              </h2>
-            </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolorem eum consequuntur ipsam repellat dolor soluta aliquid laborum, eius odit consectetur vel quasi in quidem, eveniet ab est corporis tempore.
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- end about section -->
 
@@ -166,43 +143,43 @@
       </div>
       <div class="skills__container">
       <div class="skills">
-        <img src="/static/images/Html.png" alt="html logo" >
+        <img src="{% static 'servies/images/Html.png' %}" alt="html logo' %}" >
         <p>html</p>
       </div>
       <div class="skills">
-        <img src="/static/images/css.png" alt="css logo">
+        <img src="{% static 'servies/images/css.png' %}" alt="css logo' %}">
         <p>css</p>
       </div>
       <div class="skills">
-        <img src="/static/images/js.png" alt="js logo">
+        <img src="{% static 'servies/images/js.png' %}" alt="js logo' %}">
         <p>Js</p>
       </div>
       <div class="skills">
-        <img src="/static/images/python.png" alt="python logo">
+        <img src="{% static 'servies/images/python.png' %}" alt="python logo' %}">
         <p>Python</p>
       </div>
       <div class="skills">
-        <img src="/static/images/mongodb.png" alt="mongodb logo">
+        <img src="{% static 'servies/images/mongodb.png' %}" alt="mongodb logo' %}">
         <p>Mongodb</p>
       </div>
       <div class="skills">
-        <img src="/static/images/flask.png" alt="flask logo">
+        <img src="{% static 'servies/images/flask.png' %}" alt="flask logo' %}">
         <p>Flask</p>
       </div>
       <div class="skills">
-        <img src="/static/images/database.png" alt="sql logo">
+        <img src="{% static 'servies/images/database.png' %}" alt="sql logo">
         <p>SQL</p>
       </div>
       <div class="skills">
-        <img src="/static/images/excel.png" alt="excel logo">
+        <img src="{% static 'servies/images/excel.png' %}" alt="excel logo' %}">
         <p>Excel</p>
       </div>
       <div class="skills">
-        <img src="/static/images/git.png" alt="git logo">
+        <img src="{% static 'servies/images/git.png' %}" alt="git logo' %}">
         <p>git</p>
       </div>
       <div class="skills">
-        <img src="/static/images/github.png" alt="github logo">
+        <img src="{% static 'servies/images/github.png' %}" alt="github logo' %}">
         <p>GitHub</p>
       </div>
     </div>
@@ -224,6 +201,11 @@
       <div class="row">
         {% for n in serviesData  %}
         <div class="col-md-6 col-lg-4 mx-auto">
+          {% if user.is_authenticated %}
+          <a href="pd/{{n.id}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+          <a href="del/{{n.id}}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+          {% endif %}
+
           <div class="box">
             <div class="img-box">
               <img src="/media/{{n.servies_icon}}" alt="image">
@@ -232,12 +214,12 @@
               <h5>
                 {{n.servies_title}}
               </h5>
-              <h6>
+              <h6 style="height: 130px; overflow: hidden;" >
                 {{n.servies_des}}
               </h6>
               <a href="{{n.servies_git_url}}" id="git">
                 
-                <img src="/static/images/github.png" alt="image" style="width: 3vw;">
+                <img src="{% static 'servies/images/github.png' %}" alt="image" style="width: 3vw;">
               </a>
             </div>
           </div>
@@ -269,7 +251,7 @@
               <div class="col-md-11 col-lg-10 mx-auto">
                 <div class="box">
                   <div class="img-box">
-                    <img src="/static/images/milan.jpg" alt="" />
+                    <img src="{% static 'servies/images/milan.jpg' %}" alt="" />
                   </div>
                   <div class="detail-box">
                     <div class="name">
@@ -291,7 +273,7 @@
               <div class="col-md-11 col-lg-10 mx-auto">
                 <div class="box">
                   <div class="img-box">
-                    <img src="/static/images/sp.jpg" alt="" />
+                    <img src="{% static 'servies/images/sp.jpg' %}" alt="" />
                   </div>
                   <div class="detail-box">
                     <div class="name">
@@ -313,7 +295,7 @@
               <div class="col-md-11 col-lg-10 mx-auto">
                 <div class="box">
                   <div class="img-box">
-                    <img src="/static/images/darshit.jpg" alt="" />
+                    <img src="{% static 'servies/images/darshit.jpg' %}" alt="" />
                   </div>
                   <div class="detail-box">
                     <div class="name">
@@ -358,21 +340,22 @@
                 Contact Us
               </h2>
             </div>
-            <form action="">
+            <form method="post" action="">
+              {% csrf_token %}
               <div>
-                <input type="text" placeholder="Your Name" />
+                <input type="text" placeholder="Your Name" name="name" required>
               </div>
               <div>
-                <input type="text" placeholder="Phone Number" />
+                <input type="text" placeholder="Phone Number" name="mobile" required>
               </div>
               <div>
-                <input type="email" placeholder="Email" />
+                <input type="email" placeholder="Email" name="email" required>
               </div>
               <div>
-                <input type="text" class="message-box" placeholder="Message" />
+                <input type="text" class="message-box" placeholder="Message" name="message" required>
               </div>
               <div class="btn_box">
-                <button>
+                <button type="submit">
                   SEND
                 </button>
               </div>
@@ -439,22 +422,22 @@
               </h5>
               <div class="post_box">
                 <div class="img-box">
-                  <img src="images/f1.png" alt="">
+                  <img src="{% static 'images/f1.png' %}" alt="">
                 </div>
                 <div class="img-box">
-                  <img src="images/f2.png" alt="">
+                  <img src="{% static 'images/f2.png' %}" alt="">
                 </div>
                 <div class="img-box">
-                  <img src="images/f3.png" alt="">
+                  <img src="{% static 'images/f3.png' %}" alt="">
                 </div>
                 <div class="img-box">
-                  <img src="images/f4.png" alt="">
+                  <img src="{% static 'images/f4.png' %}" alt="">
                 </div>
                 <div class="img-box">
-                  <img src="images/f5.png" alt="">
+                  <img src="{% static 'images/f5.png' %}" alt="">
                 </div>
                 <div class="img-box">
-                  <img src="images/f6.png" alt="">
+                  <img src="{% static 'images/f6.png' %}" alt="">
                 </div>
               </div>
             </div> -->
@@ -506,11 +489,11 @@
 
 
   <!-- jQery -->
-  <script src="/static/js/jquery-3.4.1.min.js"></script>
+  <script src="{% static 'servies/js/jquery-3.4.1.min.js' %}"></script>
   <!-- bootstrap js -->
-  <script src="/static/js/bootstrap.js"></script>
+  <script src="{% static 'servies/js/bootstrap.js' %}"></script>
   <!-- custom js -->
-  <script src="/static/js/custom.js"></script>
+  <script src="{% static 'servies/js/custom.js' %}"></script>
   <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
   <!-- End Google Map -->

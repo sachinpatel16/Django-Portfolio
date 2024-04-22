@@ -84,8 +84,7 @@ body {
   }
 }
 
-h1,
-h2 {}
+
 
 /*header section*/
 .hero_area {
@@ -485,7 +484,9 @@ a:focus {
       overflow: hidden;
 
       img {
-        width: 100%;
+        // width: 100%;
+        width: 350px;
+        height: 200px;
       }
     }
 

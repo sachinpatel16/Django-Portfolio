@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Form</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'servies/css/bootstrap.css' %}" />
+  
+</head>
+<body>
+    <div class="container">
+        <a href='{% url "index" %}' class="btn btn-primary">Back</a>
+        <h1 class="mt-5">Bootstrap Form</h1>
+        <form action="{% url "pa" %}" method='post' enctype="multipart/form-data">
+        {% csrf_token %}
+            <div class="mb-3">
+                <label for="imageInput" class="form-label">Image</label>
+                <input type="file" name="pic" class="form-control" id="imageInput" accept="image/*">
+            </div>
+            <div class="mb-3">
+                <label for="titleInput" class="form-label">Title</label>
+                <input type="text" name='title' class="form-control" id="titleInput" placeholder="Enter title">
+            </div>
+            <div class="mb-3">
+                <label for="textInput" class="form-label">Text</label>
+                <textarea class="form-control" name="desc" id="textInput" rows="3" placeholder="Enter text"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="urlInput" class="form-label">URL</label>
+                <input type="url" name="url" class="form-control" id="urlInput" placeholder="Enter URL">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-jZzA2lW6ZK4QQm20N6wNRoXpZcKkG7Ud4x2C/Pm2Z4xk3oUG0Ow/1KK+JoOyh6EP" crossorigin="anonymous"></script>
+</body>
+</html>
